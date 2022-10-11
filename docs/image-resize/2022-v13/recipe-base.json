@@ -1,0 +1,54 @@
+{
+  "$id": "https://example.com/person.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Recipe",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "the name is mainly for your own orientation that you know what it's for"
+    },
+    "variants": {
+      "type": "string",
+      "description": "the list of sizes to resize to",
+      "pattern": "^[0-9\\,\\.\\*/ wx]+$"
+    },
+    "setWidth": {
+      "type": "boolean",
+      "default": true
+    },
+    "setHeight": {
+      "type": "boolean",
+      "default": true
+    },
+    "attributes": {
+      "type": "object",
+      "description": "attributes to add to the tag",
+      "properties": {
+        "sizes": {
+          "type": "string",
+          "description": "Standard sizes-attribute to help the browser",
+          "default": "(max-width: 1400px) 34vw, (max-width: 991px) 50vw, (max-width: 575px) 100vw, 390px"
+        },
+        "class": {
+          "type": "string",
+          "description": "class to add to this tag",
+          "default": "img-fluid"
+        },
+        "loading": {
+          "type": "string",
+          "default": "lazy"
+        }
+      },
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "recipes": {
+      "type": "array",
+      "items": {
+        "$ref": "./sub-recipe.json"
+      }
+    }
+  }
+}

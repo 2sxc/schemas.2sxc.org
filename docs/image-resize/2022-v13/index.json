@@ -1,0 +1,23 @@
+{
+  "$id": "https://example.com/person.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Person",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "title": "The schema - really recommended",
+      "default": "todo"
+    },
+    "recipe": {
+      "type": "object",
+      "description": "This is the root recipe, it has a few features less than sub-recipes.",
+      "anyOf": [
+        {
+          "$ref": "./recipe-base.json"
+        }
+      ]
+    }
+  },
+  "unevaluatedProperties": false
+}
