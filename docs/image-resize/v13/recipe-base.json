@@ -1,24 +1,27 @@
 {
-  "$id": "https://example.com/person.schema.json",
+  "$id": "https://schemas.2sxc.org/image-resize/v13/recipe-base.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Recipe",
   "type": "object",
+
   "properties": {
     "name": {
       "type": "string",
-      "title": "the name is mainly for your own orientation that you know what it's for"
+      "description": "The name is mainly for your own orientation that you know what it's for"
     },
     "variants": {
       "type": "string",
-      "description": "the list of sizes to resize to",
+      "description": "The list of sizes to resize to",
       "pattern": "^[0-9\\,\\.\\*/ wx]+$"
     },
     "setWidth": {
       "type": "boolean",
+      "description": "If true, will set a width attribute on the main tag.",
       "default": true
     },
     "setHeight": {
       "type": "boolean",
+      "description": "If true, will set a height attribute on the main tag.",
       "default": true
     },
     "attributes": {
@@ -37,18 +40,21 @@
         },
         "loading": {
           "type": "string",
+          "description": "Tell the browser to apply lazy loading - recommended.",
           "default": "lazy"
         }
       },
       "additionalProperties": {
-        "type": "string"
+        "type": "string",
+        "description": "Any attribute to set on the html tag."
       }
     },
     "recipes": {
       "type": "array",
       "items": {
-        "$ref": "./sub-recipe.json"
-      }
+        "$ref": "./recipe-sub.json"
+      },
+      "description": "Sub-recipes which inherit all the parameters of the parent recipe(s)."
     }
   }
 }

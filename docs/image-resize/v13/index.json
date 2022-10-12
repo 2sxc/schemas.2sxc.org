@@ -1,13 +1,13 @@
 {
-  "$id": "https://example.com/person.schema.json",
+  "$id": "https://schemas.2sxc.org/image-resize/v13/index.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Person",
+  "title": "Image Resize Configuration Recipe",
   "type": "object",
   "properties": {
     "$schema": {
       "type": "string",
-      "title": "The schema - really recommended",
-      "default": "todo"
+      "description": "The schema - really recommended",
+      "default": "https://schemas.2sxc.org/image-resize/v13/index.json"
     },
     "recipe": {
       "type": "object",

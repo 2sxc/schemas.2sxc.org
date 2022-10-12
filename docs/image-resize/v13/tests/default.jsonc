@@ -18,9 +18,14 @@
         "name": "Bootstrap4",
         "forCss": "bs4",
         "attributes": { "class": "img-fluid" },
-        "setWidth": true,
-        // test
-        "forTag": "img"
+        "setWidth": true
+      },
+      // test 1
+      {
+        "forTag": "img",
+        "attributes": {
+          "something": "i like it"
+        }
       },
       {
         "name": "Bootstrap5",

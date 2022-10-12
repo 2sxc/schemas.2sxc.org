@@ -1,0 +1,34 @@
+{
+  "$id": "https://schemas.2sxc.org/image-resize/v13/recipe-sub.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Recipe",
+  "type": "object",
+
+  "anyOf": [
+    {
+      "$ref": "./recipe-base.json"
+    }
+  ],
+  "properties": {
+    "forCss": {
+      "type": "string",
+      "description": "Restricts this configuration to only apply to the specific css framework. \n Use the Koi keys such as bs5 etc. to identify the framework - see https://connect-koi.net/css-frameworks",
+      "default": "bs5"
+    },
+    "forFactor": {
+      "type": "string",
+      "description": "Restricts this configuration to only apply to images which are resized to a specific factor, such as 3/12. Often used to just specify exact pixel sizes for a factor.",
+      "pattern": "^[0-9/:\\.]+$"
+    },
+    "forTag": {
+      "type": "string",
+      "description": "Restricts this recipe to be used on a specific tag - img or source.",
+      "pattern": "^(img|source)$",
+      "default": "img"
+    },
+    "width": {
+      "type": "number"
+    }
+  },
+  "unevaluatedProperties": false
+}
