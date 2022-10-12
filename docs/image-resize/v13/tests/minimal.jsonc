@@ -1,0 +1,11 @@
+{
+  "$schema": "https://schemas.2sxc.org/image-resize/v13/index.json",
+  "recipe": {
+    "name": "default",
+    "variants": "2*, 1*, 3/4*, 1/2*",
+    "setWidth": false,
+    "attributes": {
+      "loading": "lazy"
+    }
+  }
+}
