@@ -17,7 +17,7 @@
     },
     "forFactor": {
       "type": "string",
-      "description": "Restricts this configuration to only apply to images which are resized to a specific factor, such as 3/12. Often used to just specify exact pixel sizes for a factor.",
+      "description": "Restricts this configuration to only apply to images which are resized to a specific factor, such as 3/12. Often used to just specify exact pixel sizes for a factor. \n Requires feature ImageServiceUseFactors (Perfectionist Patrons only).",
       "pattern": "^[0-9/:\\.]+$"
     },
     "forTag": {

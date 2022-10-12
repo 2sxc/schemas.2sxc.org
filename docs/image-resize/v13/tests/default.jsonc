@@ -24,7 +24,8 @@
       {
         "forTag": "img",
         "attributes": {
-          "something": "i like it"
+          "something": "i like it",
+          "loading": null
         }
       },
       {
