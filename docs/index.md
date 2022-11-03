@@ -5,4 +5,4 @@ This is just a lightweight repo which will contain public schemas for use in the
 As of now, we have these schemas:
 
 1. [Image Resize](./image-resize/index.md)
-
+1. [App_Data/app.json](./app/index.md)

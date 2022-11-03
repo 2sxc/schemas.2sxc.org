@@ -1,5 +1,5 @@
 # 2sxc Schemas – Image Resize
 
-WIP schemas for image resize
+Schemas for image resize
 
-* 2022-v13 is WIP - see [index](./v13/index.json)
+* 2022-v13 [index](./v13/index.json)
