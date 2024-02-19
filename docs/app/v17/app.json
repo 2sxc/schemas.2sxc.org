@@ -1,0 +1,73 @@
+{
+  "$id": "https://schemas.2sxc.org/app/v17/app.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "App_Data/app.json Configuration Schema",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "The schema - really recommended",
+      "default": "https://schemas.2sxc.org/app/v17/app.json"
+    },
+    "export": {
+      "type": "object",
+      "description": "Settings which affect the normal app export functionality.",
+      "properties": {
+        "exclude": {
+          "description": "Exclude certain folders/file beginning with the values specified below. \n Note that it may look like glob, but ATM it's a simpler starts-with mechanism.",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "examples": [
+              ".git/",
+              ".github/",
+              ".temp_cache/",
+              "node_modules/"
+            ]
+          },
+          "uniqueItems": true
+        }
+      }
+    },
+    "editions": {
+      "type": "object",
+      "description": "List of all editions and settings for each edition.",
+      "properties": {
+        "": {
+          "$ref": "./edition.json",
+          "description": "Root edition - for scenarios without editions."
+        },
+        "live": {
+          "$ref": "./edition.json",
+          "description": "Live edition - for staging/live polymorphism."
+        },
+        "staging": {
+          "$ref": "./edition.json",
+          "description": "Live edition - for staging/live polymorphism."
+        },
+        "bs3": {
+          "$ref": "./edition.json",
+          "description": "Bootstrap 3 edition."
+        },
+        "bs4": {
+          "$ref": "./edition.json",
+          "description": "Bootstrap 4 edition."
+        },
+        "bs5": {
+          "$ref": "./edition.json",
+          "description": "Bootstrap 5 edition."
+        }
+      },
+      "additionalProperties": {
+        "$ref": "./edition.json",
+        "description": "Any custom edition."
+      }
+    },
+    "copilot": {
+      "$ref": "./copilot.json",
+      "description": "Settings for the copilot / tools to assist developers."
+    },
+    "unevaluatedProperties": false
+  },
+  "unevaluatedProperties": false
+}
