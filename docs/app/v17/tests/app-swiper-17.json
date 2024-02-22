@@ -41,10 +41,14 @@
       "description": "default, root edition"
     },
     "live": {
-      "description": "live edition"
+      "description": "live edition",
+      "generateModelsEnabled": false
     },
     "staging": {
-      "description": "staging edition"
+      "description": "staging edition",
+      "deployTo": "live",
+      "generateModelsEnabled": true,
+      "generateModelsConfiguration": "default"
     },
     "bs5": {
       "description": "Bootstrap 3 edition"

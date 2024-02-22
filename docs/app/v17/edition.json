@@ -13,7 +13,11 @@
       "type": "string",
       "description": "The edition to deploy to. If not specified, the edition will not support auto-deploy."
     },
-    "generateModel": {
+    "generateModelsEnabled": {
+      "type": "boolean",
+      "description": "Enable/Disable the generation of Models. This is necessary, so that the UI can warn users when content types change. Default is false."
+    },
+    "generateModelsConfiguration": {
       "type": "string",
       "description": "The configuration name of the model to generate. NOT IMPLEMENTED YET"
     }

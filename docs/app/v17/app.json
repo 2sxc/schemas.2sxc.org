@@ -6,7 +6,7 @@
   "properties": {
     "$schema": {
       "type": "string",
-      "description": "The schema - really recommended",
+      "description": "The schema - really recommended to get intellisense. \n 📖 https://go.2sxc.org/app-json",
       "default": "https://schemas.2sxc.org/app/v17/app.json"
     },
     "export": {
@@ -31,7 +31,7 @@
     },
     "editions": {
       "type": "object",
-      "description": "List of all editions and settings for each edition.",
+      "description": "List of all editions and settings for each edition. \n 📖 https://go.2sxc.org/app-json",
       "properties": {
         "": {
           "$ref": "./edition.json",
@@ -65,7 +65,7 @@
     },
     "copilot": {
       "$ref": "./copilot.json",
-      "description": "Settings for the copilot / tools to assist developers."
+      "description": "Settings for the copilot / tools to assist developers. \n 📖 https://go.2sxc.org/app-json"
     },
     "unevaluatedProperties": false
   },
