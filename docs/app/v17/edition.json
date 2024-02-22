@@ -17,5 +17,6 @@
       "type": "string",
       "description": "The configuration name of the model to generate. NOT IMPLEMENTED YET"
     }
-  }
+  },
+  "unevaluatedProperties": false
 }

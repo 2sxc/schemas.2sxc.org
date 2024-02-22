@@ -1,6 +1,6 @@
 {
   // "$schema": "../app.json",
-  // "$schema": "https://schemas.2sxc.org/app/v14/app.json",
+  // "$schema": "https://schemas.2sxc.org/app/v17/app.json",
   "$schema": "../app.json",
   /*
     This is a JSON file but it is treated like a JSONC (with comments).
@@ -58,7 +58,8 @@
   },
 
   "copilot": {
-    "generateModels": {
+    "generateModelsEnabled": true,
+    "generateModelConfigurations": {
       "default": {
         "enabled": true,
         "namespace": "AppCode.Data",
@@ -66,9 +67,12 @@
         "usings": [
           "System",
           "System.Collections.Generic"
-        ]
-      }
-    }
-  }
-
+        ],
+        "test": true
+      },
+      "test": true
+    },
+    "test": true
+  },
+  "test": true
 }
