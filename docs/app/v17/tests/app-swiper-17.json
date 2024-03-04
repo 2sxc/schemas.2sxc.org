@@ -45,6 +45,7 @@
       "generateModelsEnabled": false
     },
     "staging": {
+      "isDefault": true,
       "description": "staging edition",
       "deployTo": "live",
       "generateModelsEnabled": true,
